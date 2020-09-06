@@ -6,8 +6,10 @@ public class Main {
 	public static void main(String[] args) {
 		NetController nc = new NetController();
 
-		String osName = "Linux";
+		String osName = System.getProperty("os.name");
 
-		nc.ip(osName);
+		String arrString = nc.ping(osName, "www.google.com");
+
+		System.out.println(arrString);
 	}
 }
